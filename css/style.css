@@ -2,9 +2,9 @@
 
 /* || RESET */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* || COLORS */
@@ -20,10 +20,10 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    background-color: burlywood;
     display: flex;
     flex-flow: column nowrap;
-    background-color: burlywood;
+    min-height: 100vh;
 }
 
 header {
@@ -32,21 +32,21 @@ header {
 }
 
 .header-title-line {
-    padding: 0.25rem 0.5rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    padding: 0.25rem 0.5rem;
 }
 
 .menu-button {
+    align-items: center;
     background-color: transparent;
     border: none;
-    width: 48px;
-    height: 48px;
     display: flex;
+    height: 48px;
     justify-content: center;
-    align-items: center;
     position: relative;
+    width: 48px;
 }
 
 :is(header:hover, header:focus-within) .menu-icon {
@@ -67,11 +67,11 @@ header {
 .menu-icon::before,
 .menu-icon::after {
     background-color: var(--HEADER-COLOR);
-    width: 40px;
-    height: 5px;
     border-radius: 5px;
+    height: 5px;
     position: absolute;
     transition: all 0.5s;
+    width: 40px;
 }
 
 .menu-icon::before,
@@ -87,10 +87,10 @@ header {
 }
 
 nav {
-    display: none;
-    transform-origin: top center;
     animation: showMenu 0.5s ease-in-out forwards;
     background-color: var(--HEADER-BGCOLOR);
+    display: none;
+    transform-origin: top center;
 }
 
 @keyframes showMenu {
@@ -106,21 +106,21 @@ nav {
 }
 
 nav ul {
-    list-style-type: none;
     display: flex;
     flex-flow: column nowrap;
+    list-style-type: none;
 }
 
 nav li {
-    padding: 0.5rem;
     border-top: 1px solid var(--HEADER-COLOR);
+    padding: 0.5rem;
 }
 
 nav a {
     display: block;
+    margin: auto;
     text-align: center;
     width: 80%;
-    margin: auto;
 }
 
 nav a:any-link {
